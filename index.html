@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="YB">
+    <meta name="description" content="Netflix Clone">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone - Watch TV Shows Online, Watch Movies Online</title>
+    <link rel="icon" href="letterlogo.png">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@6/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper@6/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+
+    <div class="nav-links">
+        <img src="logo.png" alt="Netflix Logo">
+        <form>
+            <label for="languages"></label>
+            <select name="languages" id="languages">
+                <option value="English">English</option>
+                <option value="Español">Español</option>
+            </select>
+            <button>Sign In</button>
+        </form>
+    </div>
+
+    <div class="main-content">
+        <h1>Unlimited movies, TV </h1>
+        <h1>shows, and more </h1>
+        <p class="subtitle">Starts at $8.99. Cancel anytime.</p>
+        <p class="subtitle2">Ready to watch? Enter your email to create or restart your</p>
+        <p class="subtitle3">membership.</p>
+        <div class="email-form">
+            <input type="text" placeholder="Email address">
+            <button>Get Started</button>
+        </div>
+    </div>
+
+    <div class="thumbsection">
+        <h2 class="thumbtitle">Trending Now</h2>
+    </div>
+
+    <div class="thumbTiles swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a class="thumbTile" href="#">
+                            <img class="thumbTile__image"
+                                src="https://occ-0-1433-1432.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABUqwomVyMFsby9zeXLLnkfv744mKCzQDWL7rUDhbwg89bpT-V7qYoW-NNfjFaG3nFcDWu-U49vpUFB_L4njc2GFl6l60Efb4oT-_0e3oi3Dh8nwyLZhG2ciBHGUnRMB_J-D2jQk2Qz_WM4n8A_8b8ZqFDpj80B6KJ9T2bXR7rYcl0M8MaDCsR68.jpg?r=93f"
+                                alt="The Queen's Gambit">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="thumbTile" href="#">
+                            <img class="thumbTile__image"
+                                src="https://occ-0-1433-1432.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABSEl8LWx4tMJIM9Atm3F1Y49Uq6X01tnDe8gPA6d84-gQ767saz9z7Jxj9sFozuI8bcM2vlxeP9IPq3Aa7jxLlkMu8JGjizRLblNEcmD7g-Z2NeZvkvV5nWF9DmJ.jpg?r=393"
+                                alt="Dark">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="thumbTile" href="#">
+                            <img class="thumbTile__image"
+                                src="https://occ-0-1433-1432.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRItzLGWEqRojd0SS5lkLN56bRwYGctgeybCwPWq-zs_UwEXKX_4CsXsMlWupAdBB5D7KDN-8RzuCvqzTf5Bvo_HQmI.webp?r=3ad"
+                                alt="Suits">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="thumbTile" href="#">
+                            <img class="thumbTile__image"
+                                src="https://occ-0-1433-1432.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABUjsKDiaKwLmrV662pwmVKEtRmbJI-s8M9ojCqr2QEdnPUJPX86RP-n9IGXxGcaHWkTf-cwz5e4kBLN3jYLM7HuBfYA.webp?r=01d"
+                                alt="Breaking Bad">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="thumbTile" href="#">
+                            <img class="thumbTile__image"
+                                src="https://occ-0-1433-1432.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABdPrypf33QcVWc0DHxX7rDoTSbX7EgHSJd_VDlwIr81A40ua4l2F_esQS1u4zB9SkN5TAGO1Bw0SmoEqTICKfx9vbRu-qdKh9KGWuRLasXOrCIUpEYnMffVoebRS.jpg?r=d3b"
+                                alt="The Crown">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+            spaceBetween: 5,
+            slidesPerView: 2,
+            loop: true,
+            freeMode: true,
+            loopAdditionalSlides: 5,
+            speed: 500,
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                // when window width is >= 640px
+                640: {
+                    slidesPerView: 5,
+                    slidesPerGroup: 5,
+                    freeMode: false
+                }
+            }
+        })
+</script>
+</body>
+</html>

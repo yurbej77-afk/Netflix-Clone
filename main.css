@@ -18,6 +18,10 @@ body {
 
     .nav-links {
     display: flex;
+    /* Sign In button overlapping the Netflix logo when the screen gets narrow. 
+    This is because nav is display: flex in a row but has no instructions 
+    for what to do when space runs out. Adding media query @media (max-width: 639px) and @media (max-width: 320px)
+     to  existing mobile media */
     justify-content: space-between; 
     align-items: flex-end;
     padding: 20px 20px;
@@ -59,35 +63,48 @@ body {
         padding: 70px 20px 60px 20px;
     }
 
+
+    /* Adding CLAMP- meaning: never smaller than 1.4rem (mobile), 
+    ideally 3.5vw (scales with viewport width-3.5% of screen width,
+    never larger than 3rem (big desktop) */
+    /*control WHERE the wrap happens with max-width, 
+    not by jamming text into multiple paragraph tags
+    The max-width: 420px forces the line to break before "membership" 
+    gets orphaned. If it still looks off, bump it to 400px or 380px 
+    — just adjust until the break looks natural. */
+
 h1 {
-    font-size: 2em;
+    font-size: clamp(1.4rem, 3.5vm, 3rem);
     font-weight: bold;
     margin-bottom: 0px;
-    max-width: 700px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.2;
+    line-height: 1.15;
     }
 
 
 .subtitle {
-    font-size: 16px;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
     margin-bottom: 30px;
     margin-top: 23px;
-    line-height: 1.0;
+    margin-left:auto;
+    margin-right: auto;
+    line-height: 1.5;
+    max-width: 600px;
     }    
 
 .subtitle2 {
-    font-size: 16px;
-    margin-bottom: 20px;
-    line-height: 0.5;
-    }
-
-.subtitle3 {
-font-size: 16px;
-margin-bottom: 30px;
-line-height: 0;
+    font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+    line-height: 1.6;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+    color: #fff;
 }
+
+
 
 
 
@@ -263,5 +280,42 @@ line-height: 0;
     /* Thumbnail title */
     .thumbtitle {
         font-size: 14px;
+    }
+}
+
+@media (max-width: 639px) {
+
+    .nav-links {
+        flex-wrap: wrap;
+        padding: 12px 16px;
+        gap: 8px;
+    }
+
+    .nav-links img {
+        height: 22px;
+    }
+
+    .nav-links form {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .nav-links select {
+        font-size: 11px;
+        padding: 4px 6px;
+    }
+
+    .nav-links button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+/* Extra small screens - below 320px */
+@media (max-width: 320px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }

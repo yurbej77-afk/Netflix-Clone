@@ -11,7 +11,7 @@
 body {
     font-family: var(--fontOne);
     background-color: var(--colorOne);
-    color: #fff;          
+    color: var(--colorWhite);          
     min-height: 100vh;
 }
 
@@ -37,7 +37,7 @@ body {
 
     .nav-links select {
         background-color: transparent;
-        color: #fff;
+        color: var(--colorWhite);
         border: 1px solid #a7a4a4;
         padding: 5px 10px;
         margin-right: 10px;
@@ -47,7 +47,7 @@ body {
 
     .nav-links button {
     background-color: #e50914;
-    color: #fff;
+    color: var(--colorWhite);
     border: none;
     padding: 8px 16px;
     border-radius: 3px;
@@ -101,7 +101,7 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 24px;
-    color: #fff;
+    color: var(--colorWhite);
 }
 
 
@@ -122,12 +122,12 @@ h1 {
     border: 1px solid #ccc; 
     border-radius: 3px;
     background-color: rgba(0, 0, 0, 0.6);
-    color: #fff;
+    color: var(--colorWhite);
 }
 
 .email-form button {
     background-color: #e50914;
-    color: #fff;
+    color: var(--colorWhite);
     border: none;
     padding: 14px 28px;
     font-weight: bold;
@@ -188,7 +188,7 @@ h1 {
 
 .thumbTiles .swiper-button-prev::after,
 .thumbTiles.swiper-button-next::after {
-    color: #fff;
+    color: var(--colorWhite);
     font-size: 4vw;
     font-weight: bold;
     transition: transform 0.1s ease-out;
